@@ -1,6 +1,6 @@
 .footer{
   position: relative;
-  top: 106dvh;
+  top: 1067vh;
   width: calc(92% + 2px);
   padding: 40px 8% 16px;
   background-color: #fff;
@@ -12,9 +12,7 @@
     top: 92dvh;
     // width: 92%;
     width: 100%;
-    margin-right: 0;
-    margin-left: auto;
-    padding: 40px 4% 16px;
+    padding: 40px 4% 24px;
   }
 
   &-copy{
@@ -38,7 +36,7 @@
     cursor: pointer;
 
     @media screen and (max-width:768px) {
-      top: 16px;
+      top: 24px;
       right: 16px;
       width: 32px;
       height: 32px;
