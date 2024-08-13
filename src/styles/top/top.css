@@ -114,7 +114,6 @@
   height: 100vh;
   background-color: #BF3A42;
   z-index: 200;
-  overflow: hidden;
 }
 .header-modal-inner {
   width: 100%;
