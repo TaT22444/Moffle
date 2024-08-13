@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/top/top.css'
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import NewsList from '../components/newsList.astro';
 ---
 
 <Layout title="もっふる | カリっとモッチリ食感">
@@ -295,59 +296,7 @@ import Footer from '../components/Footer.astro';
 				<span class="news-title--sub">news</span>
 			</h2>
 			<div class="news-box">
-				<ul class="news-list">
-					<li class="news-item">
-						<a href="" class="news-link" id="js-news-link">
-							<div class="news-sp">
-								<div class="news-timeWrapper">
-									<p class="news-timeWrapper-time">2024.08.23</p>
-								</div>
-								<div class="news-slash"></div>
-								<div class="news-tagWrapper">
-									<p class="news-tagWrapper-tag">お知らせ</p>
-								</div>
-								<div class="news-slash"></div>
-							</div>
-							<div class="news-textWrapper">
-								<p class="news-textWrapper-text">webサイトを公開しました！</p>
-							</div>
-						</a>
-					</li>
-					<li class="news-item">
-						<a href="" class="news-link" id="js-news-link">
-							<div class="news-sp">
-								<div class="news-timeWrapper">
-									<p class="news-timeWrapper-time">2024.08.23</p>
-								</div>
-								<div class="news-slash"></div>
-								<div class="news-tagWrapper">
-									<p class="news-tagWrapper-tag">お知らせ</p>
-								</div>
-								<div class="news-slash"></div>
-							</div>
-							<div class="news-textWrapper">
-								<p class="news-textWrapper-text">webサイトを公開しました！</p>
-							</div>
-						</a>
-					</li>
-					<li class="news-item">
-						<a href="" class="news-link" id="js-news-link">
-							<div class="news-sp">
-								<div class="news-timeWrapper">
-									<p class="news-timeWrapper-time">2024.08.23</p>
-								</div>
-								<div class="news-slash"></div>
-								<div class="news-tagWrapper">
-									<p class="news-tagWrapper-tag">お知らせ</p>
-								</div>
-								<div class="news-slash"></div>
-							</div>
-							<div class="news-textWrapper">
-								<p class="news-textWrapper-text">webサイトを公開しました！</p>
-							</div>
-						</a>
-					</li>
-				</ul>
+				<NewsList >
 			</div>
 		</div>
 	</section>
