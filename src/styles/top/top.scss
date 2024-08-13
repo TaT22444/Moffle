@@ -282,8 +282,8 @@
 }
 
 .hun{
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -297,8 +297,8 @@
   }
 
   &-elem{
-    width: 24px;
-    height: 2.4px;
+    width: 20px;
+    height: 2px;
     background-color: #BF3A42;
     border-radius: 10px;
   }
@@ -428,7 +428,7 @@ main{
     @media screen and (max-width:768px) {
       width: calc(92% - 1px);
       position: relative;
-      padding: 40px 0 1.4%;
+      padding: 24px 0 1.4%;
       margin-right: 0;
       margin-left: auto;
     }
@@ -479,7 +479,7 @@ main{
       &--main{
         font-size: var(--font-size-l);
         @media screen and (max-width:768px) {
-          font-size: var(--font-size-ml);
+          font-size: var(--font-size-ms);
         }
       }
       &--sub{
@@ -498,7 +498,7 @@ main{
 
       @media screen and (max-width:768px) {
         width: calc(100% - 40px);
-        height: 50%;
+        height: 36%;
         margin-top: 24px;
         border-radius: 0 10px 10px 0;
       }
@@ -528,10 +528,10 @@ main{
       @media screen and (max-width:768px) {
         flex-direction: column;
         width: 100%;
-        margin-top: 40px;
-        padding: 0 6%;
+        margin-top: 24px;
+        padding: 0 24px;
         gap: 24px;
-        align-items: center;
+        // align-items: center;
       }
 
       &--cc{
@@ -540,12 +540,18 @@ main{
         font-size: var(--font-size-m);
         line-height: 1.6;
         letter-spacing: .2em;
+        @media screen and (max-width:768px) {
+          font-size: var(--font-size-ms);
+        }
       }
       &--desc{
         font-weight: 400;
         font-size: var(--font-size-xs);
         line-height: 2.2;
         letter-spacing: .2em;
+        @media screen and (max-width:768px) {
+          font-size: var(--font-size-xxs);
+        }
       }
     }
 
