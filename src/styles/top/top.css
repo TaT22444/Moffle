@@ -410,8 +410,6 @@
 }
 @media screen and (max-width: 768px) {
   .topping {
-    width: 100%;
-    min-width: 400px;
     box-shadow: none;
     border-radius: 100px 100px 0 0;
     margin-inline: auto;
