@@ -14,7 +14,7 @@
 }
 
 .anim-dis-none {
-  animation: dis-none 0s forwards;
+  animation: dis-none 0.3s forwards;
 }
 @keyframes dis-none {
   0% {
@@ -97,6 +97,7 @@
   justify-content: center;
   gap: 4px;
   padding-right: 4px;
+  cursor: pointer;
 }
 .sp-header-hun-elem {
   width: 24px;
@@ -105,7 +106,97 @@
   border-radius: 10px;
 }
 
+.header-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: #BF3A42;
+  z-index: 200;
+}
+.header-modal-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0;
+}
+.header-modal-titleBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 80px 16px 16px;
+  background-color: #fff;
+  border-radius: 10px 10px 4px 4px;
+}
+.header-modal-titleBox-title {
+  font-family: var(--font-family-en);
+  color: #BF3A42;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-modal-titleBox-title-main {
+  font-size: var(--font-size-ml);
+}
+.header-modal-titleBox-title-sub {
+  font-size: var(--font-size-ms);
+}
+.header-modal-titleBox-desc {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: #BF3A42;
+  line-height: 2;
+  letter-spacing: 0.1em;
+}
+.header-modal-titleBox > .sp {
+  width: 40px;
+  height: 2px;
+  background-color: #BF3A42;
+}
+.header-modal-titleBox-snss {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header-modal-nav {
+  width: 100%;
+  height: 100%;
+  padding: 24px 8px;
+  background-color: #fff;
+  border-radius: 4px 4px 10px 10px;
+}
+.header-modal-nav-label {
+  font-weight: 500;
+  font-size: var(--font-size-s);
+  color: #BF3A42;
+  padding: 0 8px;
+}
+.header-modal-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-top: 16px;
+}
+.header-modal-link {
+  display: block;
+  width: 100%;
+  padding: 20px 24px;
+  background-color: #BF3A42;
+  border-radius: 100px;
+  color: #fff;
+  font-weight: 500;
+  font-size: var(--font-size-xs);
+}
+
 .hun {
+  position: fixed;
+  right: 40px;
+  top: 16px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -115,7 +206,9 @@
   border-radius: 100px;
   background-color: #fff;
   gap: 4px;
-  z-index: 99;
+  border: 2px solid #BF3A42;
+  z-index: 999;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .hun {
@@ -127,6 +220,72 @@
   height: 2px;
   background-color: #BF3A42;
   border-radius: 10px;
+}
+.hun-elem-rotate45 {
+  animation: hun-rotate45 0.2s forwards;
+}
+@keyframes hun-rotate45 {
+  0% {
+    transform: 0;
+  }
+  100% {
+    transform: translateY(6.4px) rotate(-45deg);
+  }
+}
+.hun-elem-rotate45-0 {
+  animation: hun-rotate45-0 0.2s forwards;
+}
+@keyframes hun-rotate45-0 {
+  0% {
+    transform: translateY(6.4px) rotate(-45deg);
+  }
+  100% {
+    transform: 0;
+  }
+}
+.hun-elem-rotate-45 {
+  animation: hun-rotate-45 0.2s forwards;
+}
+@keyframes hun-rotate-45 {
+  0% {
+    transform: 0;
+  }
+  100% {
+    transform: translateY(-5.4px) rotate(45deg);
+  }
+}
+.hun-elem-rotate-45-0 {
+  animation: hun-rotate-45-0 0.2s forwards;
+}
+@keyframes hun-rotate-45-0 {
+  0% {
+    transform: translateY(-5.4px) rotate(45deg);
+  }
+  100% {
+    transform: 0;
+  }
+}
+.hun-elem-op0 {
+  animation: hun-op0 0.2s forwards;
+}
+@keyframes hun-op0 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.hun-elem-op1 {
+  animation: hun-op1 0.2s forwards;
+}
+@keyframes hun-op1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .hero {
@@ -283,7 +442,7 @@
 }
 @media screen and (max-width: 768px) {
   .hero-main-title--main {
-    font-size: var(--font-size-ms);
+    font-size: var(--font-size-m);
   }
 }
 .hero-main-title--sub {
@@ -305,7 +464,7 @@
   .hero-main-mv {
     width: 100%;
     height: 52%;
-    margin-top: 24px;
+    margin-top: 16px;
   }
 }
 .hero-main-mv--img {

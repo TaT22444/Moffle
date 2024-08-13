@@ -4,14 +4,14 @@
   width: calc(92% + 2px);
   padding: 40px 8% 16px;
   background-color: #fff;
-  z-index: 999;
+  z-index: 10;
   display: flex;
   justify-content: center;
   margin-inline: auto;
 }
 @media screen and (max-width: 768px) {
   .footer {
-    top: 93dvh;
+    top: 91dvh;
     width: 100%;
     padding: 40px 4% 24px;
   }
