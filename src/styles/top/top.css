@@ -422,9 +422,9 @@
     width: 92%;
     margin-left: auto;
     margin-right: 0;
-    padding: 6% 0 160px;
+    padding: 8% 0 160px;
     box-shadow: none;
-    border-radius: 100px 100px 0 0;
+    border-radius: 32px 32px 0 0;
   }
 }
 .topping-inner {
