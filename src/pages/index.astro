@@ -360,7 +360,8 @@ import Footer from '../components/Footer.astro';
 		const heroH = hero?.offsetHeight
 		console.log(heroH)
 
-		if(toppingH < 0){
+		if (toppingH !== undefined && toppingH < 0) {
+
 			header?.classList.add('anim-dis-block')
 			header?.classList.remove('anim-dis-none')
 			hero_main?.classList.add('anim-dis-none')
