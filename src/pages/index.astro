@@ -1,123 +1,398 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import '../styles/top/top.css'
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<svg
-			class="astro-a"
-			width="495"
-			height="623"
-			viewBox="0 0 495 623"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			aria-hidden="true"
-		>
-			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
-				d="M167.19 364.254C83.4786 364.254 0 404.819 0 404.819C0 404.819 141.781 19.4876 142.087 18.7291C146.434 7.33701 153.027 0 162.289 0H332.441C341.703 0 348.574 7.33701 352.643 18.7291C352.92 19.5022 494.716 404.819 494.716 404.819C494.716 404.819 426.67 364.254 327.525 364.254L264.41 169.408C262.047 159.985 255.147 153.581 247.358 153.581C239.569 153.581 232.669 159.985 230.306 169.408L167.19 364.254ZM160.869 530.172C160.877 530.18 160.885 530.187 160.894 530.195L160.867 530.181C160.868 530.178 160.868 530.175 160.869 530.172ZM136.218 411.348C124.476 450.467 132.698 504.458 160.869 530.172C160.997 529.696 161.125 529.242 161.248 528.804C161.502 527.907 161.737 527.073 161.917 526.233C165.446 509.895 178.754 499.52 195.577 500.01C211.969 500.487 220.67 508.765 223.202 527.254C224.141 534.12 224.23 541.131 224.319 548.105C224.328 548.834 224.337 549.563 224.347 550.291C224.563 566.098 228.657 580.707 237.264 593.914C245.413 606.426 256.108 615.943 270.749 622.478C270.593 621.952 270.463 621.508 270.35 621.126C270.045 620.086 269.872 619.499 269.685 618.911C258.909 585.935 266.668 563.266 295.344 543.933C298.254 541.971 301.187 540.041 304.12 538.112C310.591 533.854 317.059 529.599 323.279 525.007C345.88 508.329 360.09 486.327 363.431 457.844C364.805 446.148 363.781 434.657 359.848 423.275C358.176 424.287 356.587 425.295 355.042 426.275C351.744 428.366 348.647 430.33 345.382 431.934C303.466 452.507 259.152 455.053 214.03 448.245C184.802 443.834 156.584 436.019 136.218 411.348Z"
-				fill="url(#paint0_linear_1805_24383)"></path>
-			<defs>
-				<linearGradient
-					id="paint0_linear_1805_24383"
-					x1="247.358"
-					y1="0"
-					x2="247.358"
-					y2="622.479"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop stop-opacity="0.9"></stop>
-					<stop offset="1" stop-opacity="0.2"></stop>
-				</linearGradient>
-			</defs>
-		</svg>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="もっふる | カリっとモッチリ食感">
 </Layout>
+<!-- 
+<div class="start">
+	<div class="start-box">
+		<p class="start-box-catch catch1">カリッと</p>
+		<p class="start-box-catch catch2">モチっと</p>
+		<p class="start-box-catch catch3">もっふる</p>
+	</div>
+</div> -->
 
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style>
+<!-- <div id="header" class="sticky-header anim-dis-none">
+	<Header />
+</div> -->
+
+<header id="header" class="sp-header anim-dis-none">
+	<div class="sp-header-inner">
+		<h2 class="sp-header-title">
+			<a href="" class="sp-header-title-main">もっふる</a>
+			<a href="" class="sp-header-title-sub">-mee mee-</a>
+		</h2>
+		<div class="sp-header-hun">
+			<span class="sp-header-hun-elem"></span>
+			<span class="sp-header-hun-elem"></span>
+			<span class="sp-header-hun-elem"></span>
+		</div>
+	</div>
+</header>
+
+
+<main>
+	<div class="hero" id="hero">
+		<div class="hero-back">
+			<div class="hero-back-box">
+				<div class="hero-back-left">
+					<div class="hero-back-left--loopText">Moffle - mee mee - </div>
+					<div class="hero-back-left--loopText">Moffle - mee mee - </div>
+					<div class="hero-back-left--loopText">Moffle - mee mee - </div>
+					<div class="hero-back-left--loopText">Moffle - mee mee - </div>
+				</div>
+			</div>
+			<div class="hero-back-box">
+				<div class="hero-back-right">
+					<div class="hero-back-right--loopText">Moffle - mee mee - </div>
+					<div class="hero-back-right--loopText">Moffle - mee mee - </div>
+					<div class="hero-back-right--loopText">Moffle - mee mee - </div>
+					<div class="hero-back-right--loopText">Moffle - mee mee - </div>
+				</div>
+			</div>
+		</div>
+		<div class="hero-main" id="hero-main">
+			<div class="hero-main-inner">
+				<h1 class="hero-main-title">
+					<span class="hero-main-title--main">もっふる</span>
+					<span class="hero-main-title--sub">-mee mee-</span>
+				</h1>
+				<div class="hun">
+					<span class="hun-elem"></span>
+					<span class="hun-elem"></span>
+					<span class="hun-elem"></span>
+				</div>
+				<div class="hero-main-mv">
+					<img src="../../public/images/hero-mv.jpg" alt="" class="hero-main-mv--img">
+				</div>
+				<div class="hero-main-textBox">
+					<h2 class="hero-main-textBox--cc">
+						外はカリッと、
+						中はモチっと。
+					</h2>
+					<p class="hero-main-textBox--desc">
+						もっふるは米粉を使用することで、
+            <br>ワッフルとはまた違った食感を生み出します。
+            <br>甘いものからしょっぱいものまで、
+            <br>さまざまなトッピングでお楽しみいただけます。
+					</p>
+				</div>
+				<nav class="hero-main-header" id="js-main-header">
+					<ul class="hero-main-header-list">
+						<li class="hero-main-header-item">
+							<a href="#" class="hero-main-header--link">もっふるとは</a>
+						</li>
+						<li class="hero-main-header-item">
+							<a href="#topping" class="hero-main-header--link">トッピング</a>
+						</li>
+						<li class="hero-main-header-item">
+							<a href="#event" class="hero-main-header--link">イベント情報</a>
+						</li>
+						<li class="hero-main-header-item">
+							<a href="#news" class="hero-main-header--link">お知らせ</a>
+						</li>
+					</ul>
+					<ul class="hero-main-header-snss">
+						<li class="hero-main-header-snss-item">
+							<a href="" class="hero-main-header-snss-link">
+								<svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.3998 2.66669H21.5998C25.8665 2.66669 29.3332 6.13335 29.3332 10.4V21.6C29.3332 23.651 28.5184 25.618 27.0681 27.0683C25.6178 28.5186 23.6508 29.3334 21.5998 29.3334H10.3998C6.13317 29.3334 2.6665 25.8667 2.6665 21.6V10.4C2.6665 8.34901 3.48126 6.38201 4.93154 4.93173C6.38183 3.48145 8.34883 2.66669 10.3998 2.66669ZM10.1332 5.33335C8.86013 5.33335 7.63923 5.83907 6.73906 6.73924C5.83888 7.63942 5.33317 8.86031 5.33317 10.1334V21.8667C5.33317 24.52 7.47984 26.6667 10.1332 26.6667H21.8665C23.1395 26.6667 24.3604 26.161 25.2606 25.2608C26.1608 24.3606 26.6665 23.1397 26.6665 21.8667V10.1334C26.6665 7.48002 24.5198 5.33335 21.8665 5.33335H10.1332ZM22.9998 7.33335C23.4419 7.33335 23.8658 7.50895 24.1783 7.82151C24.4909 8.13407 24.6665 8.55799 24.6665 9.00002C24.6665 9.44205 24.4909 9.86597 24.1783 10.1785C23.8658 10.4911 23.4419 10.6667 22.9998 10.6667C22.5578 10.6667 22.1339 10.4911 21.8213 10.1785C21.5088 9.86597 21.3332 9.44205 21.3332 9.00002C21.3332 8.55799 21.5088 8.13407 21.8213 7.82151C22.1339 7.50895 22.5578 7.33335 22.9998 7.33335ZM15.9998 9.33335C17.7679 9.33335 19.4636 10.0357 20.7139 11.286C21.9641 12.5362 22.6665 14.2319 22.6665 16C22.6665 17.7681 21.9641 19.4638 20.7139 20.7141C19.4636 21.9643 17.7679 22.6667 15.9998 22.6667C14.2317 22.6667 12.536 21.9643 11.2858 20.7141C10.0355 19.4638 9.33317 17.7681 9.33317 16C9.33317 14.2319 10.0355 12.5362 11.2858 11.286C12.536 10.0357 14.2317 9.33335 15.9998 9.33335ZM15.9998 12C14.939 12 13.9216 12.4214 13.1714 13.1716C12.4213 13.9217 11.9998 14.9392 11.9998 16C11.9998 17.0609 12.4213 18.0783 13.1714 18.8284C13.9216 19.5786 14.939 20 15.9998 20C17.0607 20 18.0781 19.5786 18.8283 18.8284C19.5784 18.0783 19.9998 17.0609 19.9998 16C19.9998 14.9392 19.5784 13.9217 18.8283 13.1716C18.0781 12.4214 17.0607 12 15.9998 12Z" fill="#BF3A42"/>
+								</svg>
+							</a>
+							<a href="" class="hero-main-header-snss-link">
+								<svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18.3935 14.044L27.5735 2.66669H23.4762L16.4695 11.356L10.2535 2.66669H1.3335L11.7415 17.2134L1.96016 29.3334H6.05883L13.6655 19.9067L20.4135 29.3334H29.3335L18.3935 14.044ZM15.2202 17.9774L13.2935 15.2854L5.8135 4.83602H8.8935L14.9308 13.2587L16.8548 15.952L24.8788 27.164H21.7988L15.2202 17.9774Z" fill="#BF3A42"/>
+								</svg>	
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<section class="topping" id="topping">
+		<div class="topping-inner">
+			<h2 class="topping-title">
+				<span class="topping-title--main">トッピング</span>
+				<span class="topping-title--sub">topping</span>
+			</h2>
+			<nav class="topping-nav">
+				<ul class="topping-nav-list">
+					<li class="topping-nav-item">
+						<a href="#maro" class="topping-nav--link">マシュマロチョコ</a>
+					</li>
+					<li class="topping-nav-item">
+						<a href="#kinako" class="topping-nav--link">黒蜜きなこ</a>
+					</li>
+					<li class="topping-nav-item">
+						<a href="#annko" class="topping-nav--link">あんこ</a>
+					</li>
+					<li class="topping-nav-item">
+						<a href="#konnbu" class="topping-nav--link">しおこんぶ</a>
+					</li>
+					<li class="topping-nav-item">
+						<a href="#isobe" class="topping-nav--link">磯部焼き</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="topping-box">
+				<div class="topping-card" id="maro">
+					<div class="topping-card-imageWrapper">
+						<img src="../../public/images/topping-1.jpg" alt="" class="topping-card-imageWrapper-image"></img src="" alt="">
+					</div>
+					<div class="topping-card-textWrapper">
+						<div class="topping-card-textWrapper-nameWrapper">
+							<h3 class="topping-card-textWrapper-nameWrapper-name">マシュマロチョコ</h3>
+							<p class="topping-card-textWrapper-nameWrapper-price">400円</p>
+						</div>
+						<p class="topping-card-textWrapper-desc">
+							もっふるにチョコソースをかけ、その上にマシュマロを添えてガスバーナーで炙り、ココアパウダーを振り掛けたら完成です。
+              <br>甘さは控えめで、意外とボリューミーな逸品です。
+						</p>
+						<div class="topping-card-textWrapper-allergyWrapper">
+							<p class="topping-card-textWrapper-allergyWrapper-label">アレルギー: </p>
+							<p class="topping-card-textWrapper-allergyWrapper-text">えび / ナッツ</p>
+						</div>
+					</div>
+				</div>
+				<div class="topping-card" id="kinako">
+					<div class="topping-card-imageWrapper">
+						<img src="../../public/images/topping-2.jpg" alt="" class="topping-card-imageWrapper-image"></img src="" alt="">
+					</div>
+					<div class="topping-card-textWrapper">
+						<div class="topping-card-textWrapper-nameWrapper">
+							<h3 class="topping-card-textWrapper-nameWrapper-name">黒蜜きなこ</h3>
+							<p class="topping-card-textWrapper-nameWrapper-price">300円</p>
+						</div>
+						<p class="topping-card-textWrapper-desc">
+							もっふるにチョコソースをかけ、その上にマシュマロを添えてガスバーナーで炙り、ココアパウダーを振り掛けたら完成です。
+              <br>甘さは控えめで、意外とボリューミーな逸品です。
+						</p>
+						<div class="topping-card-textWrapper-allergyWrapper">
+							<p class="topping-card-textWrapper-allergyWrapper-label">アレルギー: </p>
+							<p class="topping-card-textWrapper-allergyWrapper-text">えび / ナッツ</p>
+						</div>
+					</div>
+				</div>
+				<div class="topping-card" id="annko">
+					<div class="topping-card-imageWrapper">
+						<img src="../../public/images/topping-3.jpg" alt="" class="topping-card-imageWrapper-image"></img src="" alt="">
+					</div>
+					<div class="topping-card-textWrapper">
+						<div class="topping-card-textWrapper-nameWrapper">
+							<h3 class="topping-card-textWrapper-nameWrapper-name">あんこ</h3>
+							<p class="topping-card-textWrapper-nameWrapper-price">300円</p>
+						</div>
+						<p class="topping-card-textWrapper-desc">
+							もっふるにチョコソースをかけ、その上にマシュマロを添えてガスバーナーで炙り、ココアパウダーを振り掛けたら完成です。
+              <br>甘さは控えめで、意外とボリューミーな逸品です。
+						</p>
+						<div class="topping-card-textWrapper-allergyWrapper">
+							<p class="topping-card-textWrapper-allergyWrapper-label">アレルギー: </p>
+							<p class="topping-card-textWrapper-allergyWrapper-text">えび / ナッツ</p>
+						</div>
+					</div>
+				</div>
+				<div class="topping-card" id="konnbu">
+					<div class="topping-card-imageWrapper">
+						<img src="../../public/images/topping-4.jpg" alt="" class="topping-card-imageWrapper-image"></img src="" alt="">
+					</div>
+					<div class="topping-card-textWrapper">
+						<div class="topping-card-textWrapper-nameWrapper">
+							<h3 class="topping-card-textWrapper-nameWrapper-name">しおこんぶ</h3>
+							<p class="topping-card-textWrapper-nameWrapper-price">300円</p>
+						</div>
+						<p class="topping-card-textWrapper-desc">
+							もっふるにチョコソースをかけ、その上にマシュマロを添えてガスバーナーで炙り、ココアパウダーを振り掛けたら完成です。
+              <br>甘さは控えめで、意外とボリューミーな逸品です。
+						</p>
+						<div class="topping-card-textWrapper-allergyWrapper">
+							<p class="topping-card-textWrapper-allergyWrapper-label">アレルギー: </p>
+							<p class="topping-card-textWrapper-allergyWrapper-text">えび / ナッツ</p>
+						</div>
+					</div>
+				</div>
+				<div class="topping-card" id="isobe">
+					<div class="topping-card-imageWrapper">
+						<img src="../../public/images/topping-5.jpg" alt="" class="topping-card-imageWrapper-image"></img src="" alt="">
+					</div>
+					<div class="topping-card-textWrapper">
+						<div class="topping-card-textWrapper-nameWrapper">
+							<h3 class="topping-card-textWrapper-nameWrapper-name">磯部焼き</h3>
+							<p class="topping-card-textWrapper-nameWrapper-price">300円</p>
+						</div>
+						<p class="topping-card-textWrapper-desc">
+							もっふるにチョコソースをかけ、その上にマシュマロを添えてガスバーナーで炙り、ココアパウダーを振り掛けたら完成です。
+              <br>甘さは控えめで、意外とボリューミーな逸品です。
+						</p>
+						<div class="topping-card-textWrapper-allergyWrapper">
+							<p class="topping-card-textWrapper-allergyWrapper-label">アレルギー: </p>
+							<p class="topping-card-textWrapper-allergyWrapper-text">えび / ナッツ</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="event" id="event">
+		<div class="event-inner">
+			<h2 class="event-title">
+				<span class="event-title--main">イベント情報</span>
+				<span class="event-title--sub">events</span>
+			</h2>
+			<span class="event-title-border"></span>
+			<div class="event-mv">
+				<img src="../../public/images/event-mv.jpg" alt="" class="event-mv--image">
+			</div>
+			<div class="event-box">
+				<h3 class="event-box-title">津田沼祭 | 第75回</h3>
+				<p class="event-box-desc">
+					千葉工業大学津田沼キャンパスで行われる津田沼祭に出店します！
+          <br>今年で本研究室の教授である長尾先生が定年されるので、代々継がれてきた長尾研でのもっふるの出店は今回で最後になります。
+          長尾研一同、過去最高のクオリティ、そして過去最高の売り上げを目指してがんばります！
+				</p>
+			</div>
+			<div class="event-details">
+				<div class="event-details-item">
+					<div class="event-details-labelWrapper">
+						<div class="event-details-labelWrapper-icon">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 17.3505C19.5 18.54 18.54 19.5 17.3505 19.5H6.6495C5.46 19.5 4.5 18.54 4.5 17.3505V6.6495C4.5 5.46 5.46 4.5 6.6495 4.5H9V3.7575C9.00121 3.58102 9.0634 3.41039 9.17603 3.27452C9.28866 3.13866 9.44481 3.04591 9.618 3.012L9.75 3C10.164 3 10.5 3.321 10.5 3.7575V4.5H13.5V3.7575C13.5012 3.58102 13.5634 3.41039 13.676 3.27452C13.7887 3.13866 13.9448 3.04591 14.118 3.012L14.25 3C14.664 3 15 3.321 15 3.7575V4.5H17.3505C18.54 4.5 19.5 5.46 19.5 6.6495V17.3505ZM6 9V16.995C6 17.55 6.45 18 7.005 18H16.995C17.55 18 18 17.55 18 16.995V9H6ZM8.25 15C8.6175 15 8.925 15.2745 8.988 15.618L9 15.75C9 16.1175 8.7255 16.425 8.382 16.488L8.25 16.5C8.05169 16.498 7.86206 16.4184 7.72183 16.2782C7.5816 16.1379 7.50195 15.9483 7.5 15.75C7.5 15.3825 7.7745 15.075 8.118 15.012L8.25 15ZM12 15C12.3675 15 12.675 15.2745 12.738 15.618L12.75 15.75C12.75 16.1175 12.4755 16.425 12.132 16.488L12 16.5C11.8017 16.498 11.6121 16.4184 11.4718 16.2782C11.3316 16.1379 11.252 15.9483 11.25 15.75C11.25 15.3825 11.5245 15.075 11.868 15.012L12 15ZM15.75 15C16.1175 15 16.425 15.2745 16.488 15.618L16.5 15.75C16.5 16.1175 16.2255 16.425 15.882 16.488L15.75 16.5C15.5517 16.498 15.3621 16.4184 15.2218 16.2782C15.0816 16.1379 15.002 15.9483 15 15.75C15 15.3825 15.2745 15.075 15.618 15.012L15.75 15ZM8.25 12.75C8.6175 12.75 8.925 13.0245 8.988 13.368L9 13.5C9 13.8675 8.7255 14.175 8.382 14.238L8.25 14.25C8.05169 14.248 7.86206 14.1684 7.72183 14.0282C7.5816 13.8879 7.50195 13.6983 7.5 13.5C7.5 13.1325 7.7745 12.825 8.118 12.762L8.25 12.75ZM12 12.75C12.3675 12.75 12.675 13.0245 12.738 13.368L12.75 13.5C12.75 13.8675 12.4755 14.175 12.132 14.238L12 14.25C11.8017 14.248 11.6121 14.1684 11.4718 14.0282C11.3316 13.8879 11.252 13.6983 11.25 13.5C11.25 13.1325 11.5245 12.825 11.868 12.762L12 12.75ZM15.75 12.75C16.1175 12.75 16.425 13.0245 16.488 13.368L16.5 13.5C16.5 13.8675 16.2255 14.175 15.882 14.238L15.75 14.25C15.5517 14.248 15.3621 14.1684 15.2218 14.0282C15.0816 13.8879 15.002 13.6983 15 13.5C15 13.1325 15.2745 12.825 15.618 12.762L15.75 12.75ZM8.25 10.5C8.6175 10.5 8.925 10.7745 8.988 11.118L9 11.25C9 11.6175 8.7255 11.925 8.382 11.988L8.25 12C8.05169 11.998 7.86206 11.9184 7.72183 11.7782C7.5816 11.6379 7.50195 11.4483 7.5 11.25C7.5 10.8825 7.7745 10.575 8.118 10.512L8.25 10.5ZM12 10.5C12.3675 10.5 12.675 10.7745 12.738 11.118L12.75 11.25C12.75 11.6175 12.4755 11.925 12.132 11.988L12 12C11.8017 11.998 11.6121 11.9184 11.4718 11.7782C11.3316 11.6379 11.252 11.4483 11.25 11.25C11.25 10.8825 11.5245 10.575 11.868 10.512L12 10.5ZM15.75 10.5C16.1175 10.5 16.425 10.7745 16.488 11.118L16.5 11.25C16.5 11.6175 16.2255 11.925 15.882 11.988L15.75 12C15.5517 11.998 15.3621 11.9184 15.2218 11.7782C15.0816 11.6379 15.002 11.4483 15 11.25C15 10.8825 15.2745 10.575 15.618 10.512L15.75 10.5ZM6 7.5H18V7.005C18 6.45 17.55 6 16.995 6H7.005C6.45 6 6 6.45 6 7.005V7.5Z" fill="#fff"/>
+							</svg>								
+						</div>
+						<h4 class="event-details-labelWrapper-label">期間</h4>
+					</div>
+					<p class="event-details-text">・11月23日~11月25日の三日間</p>
+				</div>
+				<div class="event-details-item">
+					<div class="event-details-labelWrapper">
+						<div class="event-details-labelWrapper-icon">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 13.5C11.2583 13.5 10.5333 13.2801 9.91661 12.868C9.29993 12.456 8.81928 11.8703 8.53545 11.1851C8.25162 10.4998 8.17736 9.74584 8.32206 9.01841C8.46675 8.29098 8.8239 7.6228 9.34835 7.09835C9.8728 6.5739 10.541 6.21675 11.2684 6.07206C11.9958 5.92736 12.7498 6.00162 13.4351 6.28545C14.1203 6.56928 14.706 7.04993 15.118 7.66661C15.5301 8.2833 15.75 9.00832 15.75 9.75C15.7488 10.7442 15.3533 11.6973 14.6503 12.4003C13.9473 13.1033 12.9942 13.4988 12 13.5ZM12 7.5C11.555 7.5 11.12 7.63196 10.75 7.8792C10.38 8.12643 10.0916 8.47783 9.92127 8.88896C9.75098 9.3001 9.70642 9.7525 9.79323 10.189C9.88005 10.6254 10.0943 11.0263 10.409 11.341C10.7237 11.6557 11.1246 11.87 11.561 11.9568C11.9975 12.0436 12.4499 11.999 12.861 11.8287C13.2722 11.6584 13.6236 11.37 13.8708 11C14.118 10.63 14.25 10.195 14.25 9.75C14.2494 9.15345 14.0122 8.5815 13.5903 8.15967C13.1685 7.73784 12.5966 7.5006 12 7.5Z" fill="#fff"/>
+								<path d="M12 22.5L5.67301 15.0383C5.58509 14.9262 5.49809 14.8135 5.41201 14.7C4.33179 13.276 3.74799 11.5373 3.75001 9.75C3.75001 7.56196 4.6192 5.46354 6.16637 3.91637C7.71355 2.36919 9.81197 1.5 12 1.5C14.188 1.5 16.2865 2.36919 17.8336 3.91637C19.3808 5.46354 20.25 7.56196 20.25 9.75C20.2517 11.5365 19.6682 13.2743 18.5888 14.6978L18.588 14.7C18.588 14.7 18.363 14.9955 18.3293 15.0353L12 22.5ZM6.60975 13.7963C6.60975 13.7963 6.7845 14.0272 6.82425 14.0767L12 20.181L17.1825 14.0685C17.2155 14.0272 17.391 13.7948 17.3918 13.794C18.2747 12.6309 18.7518 11.2103 18.75 9.75C18.75 7.95979 18.0388 6.2429 16.773 4.97703C15.5071 3.71116 13.7902 3 12 3C10.2098 3 8.4929 3.71116 7.22703 4.97703C5.96116 6.2429 5.25001 7.95979 5.25001 9.75C5.24815 11.2112 5.72584 12.6327 6.60975 13.7963Z" fill="#fff"/>
+							</svg>													
+						</div>
+						<h4 class="event-details-labelWrapper-label">場所</h4>
+					</div>
+					<p class="event-details-text">・千葉工業大学 津田沼キャンパス (千葉県習志野市津田沼2丁目17)</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="news" id="news">
+		<div class="news-inner">
+			<h2 class="news-title">
+				<span class="news-title--main">お知らせ</span>
+				<span class="news-title--sub">news</span>
+			</h2>
+			<div class="news-box">
+				<ul class="news-list">
+					<li class="news-item">
+						<a href="" class="news-link" id="js-news-link">
+							<div class="news-timeWrapper">
+								<p class="news-timeWrapper-time">2024.08.23</p>
+							</div>
+							<div class="news-slash"></div>
+							<div class="news-tagWrapper">
+								<p class="news-tagWrapper-tag">お知らせ</p>
+							</div>
+							<div class="news-slash"></div>
+							<div class="news-textWrapper">
+								<p class="news-textWrapper-text">webサイトを公開しました！</p>
+							</div>
+						</a>
+					</li>
+					<li class="news-item">
+						<a href="" class="news-link" id="js-news-link">
+							<div class="news-timeWrapper">
+								<p class="news-timeWrapper-time">2024.08.23</p>
+							</div>
+							<div class="news-slash"></div>
+							<div class="news-tagWrapper">
+								<p class="news-tagWrapper-tag">お知らせ</p>
+							</div>
+							<div class="news-slash"></div>
+							<div class="news-textWrapper">
+								<p class="news-textWrapper-text">webサイトを公開しました！</p>
+							</div>
+						</a>
+					</li>
+					<li class="news-item">
+						<a href="" class="news-link" id="js-news-link">
+							<div class="news-timeWrapper">
+								<p class="news-timeWrapper-time">2024.08.23</p>
+							</div>
+							<div class="news-slash"></div>
+							<div class="news-tagWrapper">
+								<p class="news-tagWrapper-tag">お知らせ</p>
+							</div>
+							<div class="news-slash"></div>
+							<div class="news-textWrapper">
+								<p class="news-textWrapper-text">webサイトを公開しました！</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</main>
+<Footer />
+
+<script>
+	let lastScrollY = window.scrollY
+	window.addEventListener('scroll', () => {
+		const header = document.getElementById('header')
+		const headerH = header?.offsetHeight
+		const topping = document.getElementById('topping')
+		const toppingH = topping?.getBoundingClientRect().top
+		const currentScrollY = window.scrollY;
+		const hero = document.getElementById('hero')
+		const hero_main = document.getElementById('hero-main')
+
+		const heroH = hero?.offsetHeight
+		console.log(heroH)
+
+		if(toppingH < 0){
+			header?.classList.add('anim-dis-block')
+			header?.classList.remove('anim-dis-none')
+			hero_main?.classList.add('anim-dis-none')
+
+			if(currentScrollY >= lastScrollY){
+				header?.classList.remove('anim-dis-block');
+			  header?.classList.add('anim-dis-none');
+			} else {
+			  header?.classList.remove('anim-dis-none');
+			  header?.classList.add('anim-dis-block');
+		}
+
+		lastScrollY = currentScrollY;
+
+		} else {
+			header?.classList.remove('anim-dis-block')
+			header?.classList.add('anim-dis-none')
+			hero_main?.classList.remove('anim-dis-none')
+		}
+	})
+
+	document.querySelectorAll('#js-news-link').forEach((news_link)=>{
+		news_link.addEventListener('mouseover', () => {
+		  news_link?.classList.add('news-link-hover')
+	  })
+	  news_link?.addEventListener('mouseleave', () => {
+	  	news_link?.classList.remove('news-link-hover')
+	  })
+	})
+
+  const main_header = document.getElementById('js-main-header')
+	window.addEventListener('load', () => {
+		main_header?.classList.add('anim-main-header-in')
+	})
+</script>

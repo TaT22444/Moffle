@@ -1,0 +1,26 @@
+:root {
+  --color-white: #fff;
+  --color-gray: #dadada;
+  --color-gray: #8A8A8A;
+  --color-link: #4b8ec5;
+  --color-bg-white: #f3f3f3;
+  --color-bg-black: #252528;
+  --color-bg-black-blog: #313135;
+  --color-hamori: #7051E9;
+  --color-tat-green: #4BAAA4;
+  --color-tat-red: #D05F81;
+  --color-hov-black: #48484b;
+  --color-hov-hamori: #8c77e1;
+  --color-hov-hamori: rgb(127, 102, 229);
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-s: 16px;
+  --font-size-ms: 20px;
+  --font-size-m: 24px;
+  --font-size-ml: 32px;
+  --font-size-l: 40px;
+  --font-size-xl: 60px;
+  --font-size-xxl: 100px;
+  --font-family-ja: "Noto Sans JP", sans-serif;
+  --font-family-en: "Dela Gothic One", cursive;
+}/*# sourceMappingURL=root.css.map */

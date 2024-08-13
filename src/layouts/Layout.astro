@@ -1,50 +1,77 @@
 ---
 interface Props {
 	title: string;
+	href?: string;
+	URL?: string;
+	ogptitle?: string;
+	description?: string;
+	type?: string;
+	sns_img?: string;
 }
 
-const { title } = Astro.props;
+const { title, href, URL, ogptitle, description, type, sns_img } = Astro.props;
+
+import Header from '../components/Header.astro'
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tatsu_aihara" />
+    <meta property="og:url" content={URL} />
+    <meta property="og:title" content={ogptitle} />
+    <meta property="og:description" content={description} />
+	  <meta name="description" content={ description } />
+	  <meta property="og:type" content={type}>
+    <meta property="og:image" content={sns_img} />
+	  <!-- <link rel="icon" href="../../icon/portfolio-logo.ico"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
+		<link href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" rel="stylesheet"/>
 		<title>{title}</title>
 	</head>
 	<body>
+		<!-- <Header /> -->
 		<slot />
 	</body>
 </html>
-<style is:global>
+<style type="scss" is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+    --color-white: #fff;
+    --color-gray: #dadada;
+    --color-gray: #8A8A8A;
+    --color-link: #4b8ec5;
+    --color-bg-white: #f3f3f3;
+    --color-black: #252528;
+    --color-bg-black-blog: #313135;
+    --color-hamori: #7051E9;
+    --color-tat-green: #4BAAA4;
+    --color-tat-red: #D05F81;
+    --color-hov-black: #48484b;
+    --color-hov-hamori: #8c77e1;
+    --color-hov-hamori: rgb(127, 102, 229);
+
+    --font-size-xxs: 12px;
+    --font-size-xs: 14px;
+    --font-size-s: 16px;
+    --font-size-ms: 20px;
+    --font-size-m: 24px;
+    --font-size-ml: 32px;
+    --font-size-l: 40px;
+    --font-size-xl: 60px;
+    --font-size-xxl: 100px;
+    --font-family-ja: 'Noto Sans JP', sans-serif;
+    --font-family-en: 'Dela Gothic One', cursive;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+		font-family: var(--font-family-ja), sans-serif;
+		background: #BF3A42;
+		scroll-behavior: smooth;
 	}
 </style>

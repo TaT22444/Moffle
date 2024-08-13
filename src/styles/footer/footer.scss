@@ -1,0 +1,40 @@
+.footer{
+  position: relative;
+  top: 106dvh;
+  width: calc(92% + 2px);
+  padding: 40px 8% 16px;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+
+  &-copy{
+    color: #252528;
+    font-weight: 500;
+    font-size: var(--font-size-xxs);
+  }
+
+  &-pageTop{
+    position: absolute;
+    top: -8px;
+    right: 40px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border: 2px solid #BF3A42;
+    // background-color: #BF3A42;
+    cursor: pointer;
+  }
+}
+
+.toTop-hover{
+  transition: all .3s;
+  background-color: #BF3A42;
+}
+.toTop-icon-hover{
+  color: #fff;
+}

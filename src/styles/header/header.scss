@@ -1,0 +1,74 @@
+@use '../root/root.css';
+
+.header{
+  width: calc(100% - 80px);
+  max-width: 100%;
+  position: fixed;
+  top: 2%;
+  margin-inline: 40px;
+  padding-inline: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba($color: #252528, $alpha: 0.15);
+  border-radius: 100px;
+  z-index: 999;
+
+  &-inner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 0;
+    justify-content: space-between;
+
+    // @media screen and (max-width:768px) {
+    //   padding-top: 0;
+    // }
+  }
+
+  &-logo{
+    // flex: 1;
+    &--link{
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: center;
+      font-family: var(--font-family-en);
+      color: #BF3A42;
+    }
+    &_elem1{
+      display: block;
+      font-size: var(--font-size-m);
+    }
+    &_elem2{
+      display: block;
+      font-size: var(--font-size-s);
+    }
+  }
+
+  &-nav{
+    &--list{
+      display: flex;
+      align-items: center;
+    }
+    &--item{
+      border-right: 1px solid #252528;
+      &:nth-of-type(5){
+        border-right: none;
+      }
+    }
+    &_link{
+      padding-inline: 40px;
+      font-size: var(--font-size-xxs);
+      font-weight: bold;
+    }
+  }
+
+  &-snss{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &--link{
+      display: block;
+      padding: 4px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<!-- ---
+// src/pages/blog/index.astro
+
+import fetch from 'node-fetch';
+
+const response = await fetch(`https://${import.meta.env.VITE_MICROCMS_SERVICE_DOMAIN}.microcms.io/api/v1/blog`, {
+  headers: {
+    'X-API-KEY': import.meta.env.VITE_MICROCMS_API_KEY,
+  },
+});
+
+const blogPosts = await response.json();
+---
+
+<h1>Blog Posts</h1>
+<ul>
+  {blogPosts.contents.map((post: { id: any; thumbnail: { url: string | null | undefined; }; title: unknown; publishedAt: unknown; }) => (
+    <li>
+      <a href={`/blog/${post.id}`}>
+        <img src={post.thumbnail.url} alt={post.title} />
+        <h2>{post.title}</h2>
+      </a>
+      <p>{post.publishedAt}</p>
+    </li>
+  ))}
+</ul> -->
