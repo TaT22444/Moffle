@@ -239,7 +239,7 @@
   background-color: #fff;
   box-shadow: 0 0 8px rgba($color: #252528, $alpha: 0.15);
   border-radius: 100px;
-  z-index: 999;
+  z-index: 12;
 
   &-inner{
     width: 100%;
@@ -283,7 +283,7 @@
 }
 
 .header-modal{
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
