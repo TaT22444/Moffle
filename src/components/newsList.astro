@@ -1,6 +1,6 @@
 ---
 import { getNews } from "../library/microcms";
-const response = await getNews({fields: ["id", "", "sam", "content", "tags", "publishedAt"]})
+const response = await getNews({fields: ["id", "title", "sam", "content", "tags", "publishedAt"]})
 ---
 
 <ul class="news-list">
