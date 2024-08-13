@@ -4,7 +4,7 @@ const response = await getNews({fields: ["id", "", "sam", "content", "tags", "pu
 ---
 
 <ul class="news-list">
-  {response.contents.map((content => {
+  {response.contents.map((content =>
     <li class="news-item">
       <a href={"../"+content.id} class="news-link" id="js-news-link">
         <div class="news-sp">
@@ -22,7 +22,7 @@ const response = await getNews({fields: ["id", "", "sam", "content", "tags", "pu
 				</div>
       </a>
     </li>
-  }))}
+  ))}
 </ul>
 
 <style lang="scss">
