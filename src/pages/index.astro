@@ -70,18 +70,18 @@ import NewsList from '../components/newsList.astro';
 		</div>
 		<nav class="header-modal-nav">
 			<h3 class="header-modal-nav-label">目次</h3>
-			<ul class="header-modal-list">
-				<li class="header-modal-item">
-					<a href="#hero" class="header-modal-link">もっふるとは</a>
+			<ul class="header-modal-list" id="header-modal-list">
+				<li class="header-modal-item" id="header-modal-item">
+					<a href="../#hero" class="header-modal-link">もっふるとは</a>
 				</li>
-				<li class="header-modal-item">
-					<a href="#topping" class="header-modal-link">トッピング</a>
+				<li class="header-modal-item" id="header-modal-item">
+					<a href="../#topping" class="header-modal-link">トッピング</a>
 				</li>
-				<li class="header-modal-item">
-					<a href="#events" class="header-modal-link">イベント情報</a>
+				<li class="header-modal-item" id="header-modal-item">
+					<a href="../#event" class="header-modal-link">イベント情報</a>
 				</li>
-				<li class="header-modal-item">
-					<a href="#news" class="header-modal-link">お知らせ</a>
+				<li class="header-modal-item" id="header-modal-item">
+					<a href="../#news" class="header-modal-link">お知らせ</a>
 				</li>
 			</ul>
 		</nav>
@@ -439,4 +439,37 @@ import NewsList from '../components/newsList.astro';
 			hun3?.classList.add('hun-elem-rotate-45-0')
 		}
 	})
+	const header_modal_list = document.getElementById('header-modal-list')
+	console.log( header_modal_list)
+	header_modal_list?.querySelectorAll('#header-modal-item').forEach((header_modal_item) => {
+		console.log(header_modal_item)
+		header_modal_item.addEventListener('click', () => {
+			header_modal?.classList.add('anim-dis-none')
+			header_modal?.classList.remove('anim-dis-block')
+			// main?.classList.remove('anim-dis-none')
+			// main?.classList.add('anim-dis-block')
+			hun1?.classList.remove('hun-elem-rotate45')
+			hun1?.classList.add('hun-elem-rotate45-0')
+			hun2?.classList.remove('hun-elem-op0')
+			hun2?.classList.add('hun-elem-op1')
+			hun3?.classList.remove('hun-elem-rotate-45')
+			hun3?.classList.add('hun-elem-rotate-45-0')
+		})
+	})
+	// header_modal_list?.querySelectorAll('#header-modal-item').forEach((header_modal_item) => {
+	// 	console.log(header_modal_item)
+	// 	header_modal_item.addEventListener('clink', () => {
+	// 		console.log(header_modal_item)
+	// 		header_modal?.classList.add('anim-dis-none')
+	// 		header_modal?.classList.remove('anim-dis-block')
+	// 		// main?.classList.remove('anim-dis-none')
+	// 		// main?.classList.add('anim-dis-block')
+	// 		hun1?.classList.remove('hun-elem-rotate45')
+	// 		hun1?.classList.add('hun-elem-rotate45-0')
+	// 		hun2?.classList.remove('hun-elem-op0')
+	// 		hun2?.classList.add('hun-elem-op1')
+	// 		hun3?.classList.remove('hun-elem-rotate-45')
+	// 		hun3?.classList.add('hun-elem-rotate-45-0')
+	// 	})
+	// })
 </script>
