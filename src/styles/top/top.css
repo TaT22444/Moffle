@@ -129,15 +129,11 @@
   border-radius: 10px;
 }
 
-main {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .hero {
   position: fixed;
   width: 100%;
   height: 100dvh;
+  min-height: 890px;
 }
 .hero-back {
   width: 100%;
@@ -405,13 +401,36 @@ main {
   position: relative;
   top: 120dvh;
   width: calc(92% + 2px);
+  height: 100%;
   margin-inline: auto;
   padding: 6% 0 10%;
   background-color: #fff;
   border-radius: 200px 200px 0 0;
   box-shadow: inset 0 0 14px rgba(37, 37, 40, 0.25);
 }
+@media screen and (max-width: 768px) {
+  .topping {
+    width: 100%;
+    min-width: 400px;
+    box-shadow: none;
+    border-radius: 100px 100px 0 0;
+    margin-inline: auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.topping-inner {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .topping-inner {
+    margin-inline: auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .topping-title {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
