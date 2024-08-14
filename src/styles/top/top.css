@@ -672,6 +672,7 @@
 @media screen and (max-width: 768px) {
   .topping-box {
     padding-top: 96px;
+    padding-bottom: 24px;
   }
 }
 .topping-card {
