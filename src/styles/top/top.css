@@ -70,6 +70,11 @@
   border-radius: 100px;
   z-index: 12;
 }
+@media screen and (max-width: 768px) {
+  .sp-header {
+    display: none;
+  }
+}
 .sp-header-inner {
   width: 100%;
   display: flex;
@@ -568,9 +573,9 @@
   width: calc(92% + 2px);
   height: 100%;
   margin-inline: auto;
-  padding: 6% 0 10%;
+  padding: 6% 0 14%;
   background-color: #fff;
-  border-radius: 200px 200px 0 0;
+  border-radius: 40px 40px 0 0;
   box-shadow: inset 0 0 14px rgba(37, 37, 40, 0.25);
 }
 @media screen and (max-width: 768px) {
@@ -581,6 +586,7 @@
     padding: 8% 0 160px;
     box-shadow: none;
     border-radius: 32px 32px 0 0;
+    overflow-x: hidden;
   }
 }
 .topping-inner {
@@ -655,12 +661,11 @@
 }
 .topping-box {
   width: 100%;
-  padding-top: 120px;
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
   gap: 120px;
   align-items: center;
-  overflow-x: hidden;
 }
 @media screen and (max-width: 768px) {
   .topping-box {
@@ -688,13 +693,13 @@
 .topping-card::before {
   content: "";
   position: absolute;
-  top: -40px;
+  top: -80px;
   left: -90px;
   width: 30%;
   min-width: 300px;
-  height: 30vw;
-  max-height: 300px;
-  min-height: 250px;
+  height: 40vw;
+  max-height: 500px;
+  min-height: 370px;
   border-radius: 10px;
   background-color: #BF3A42;
   z-index: 1;
@@ -702,9 +707,10 @@
 @media screen and (max-width: 768px) {
   .topping-card::before {
     width: 30%;
-    height: 10vw;
-    max-height: 300px;
-    min-height: 180px;
+    top: -40px;
+    height: 20vw;
+    max-height: 400px;
+    min-height: 240px;
   }
 }
 .topping-card:nth-of-type(2n) {
@@ -722,14 +728,14 @@
 .topping-card:nth-of-type(2n)::before {
   content: "";
   position: absolute;
-  top: -40px;
+  top: -80px;
   left: auto;
   right: -90px;
   width: 30%;
   min-width: 300px;
-  height: 30vw;
-  max-height: 300px;
-  min-height: 250px;
+  height: 40vw;
+  max-height: 500px;
+  min-height: 370px;
   border-radius: 10px;
   background-color: #BF3A42;
   z-index: 1;
@@ -737,9 +743,10 @@
 @media screen and (max-width: 768px) {
   .topping-card:nth-of-type(2n)::before {
     width: 30%;
-    height: 10vw;
-    max-height: 300px;
-    min-height: 180px;
+    top: -40px;
+    height: 20vw;
+    max-height: 400px;
+    min-height: 240px;
   }
 }
 .topping-card-imageWrapper {
